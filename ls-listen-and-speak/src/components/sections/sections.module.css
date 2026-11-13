@@ -1,0 +1,703 @@
+.hero {
+  padding-block: clamp(4.5rem, 9vw, 8.5rem) var(--space-8);
+}
+
+.heroLayout {
+  --opening-distance: 14px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+}
+
+.heroCopy > .eyebrow,
+.heroCopy h1,
+.heroLead,
+.heroActions,
+.heroNote,
+.voiceCard {
+  animation: opening-arrive 720ms var(--ease-out) both;
+}
+
+.heroCopy > .eyebrow {
+  animation-delay: 50ms;
+}
+
+.heroCopy h1 {
+  animation-delay: 120ms;
+}
+
+.heroLead {
+  animation-delay: 190ms;
+}
+
+.heroActions {
+  animation-delay: 260ms;
+}
+
+.heroNote {
+  animation-delay: 330ms;
+}
+
+.voiceCard {
+  animation-duration: 900ms;
+  animation-delay: 170ms;
+}
+
+@keyframes opening-arrive {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--opening-distance, 12px), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.heroCopy h1 {
+  max-width: 53rem;
+  margin: 1.55rem 0 0;
+  font-family: var(--font-editorial);
+  font-size: var(--text-display);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.heroCopy h1 span {
+  display: block;
+  color: var(--color-muted);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.heroLead {
+  max-width: 43rem;
+  margin: 1.8rem 0 0;
+  color: var(--color-muted);
+  font-size: var(--text-lg);
+  line-height: 1.78;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.1rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.heroSoftLink {
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration-color: var(--color-bronze);
+}
+
+.heroNote {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 3rem;
+}
+
+.heroNote p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.noteRule {
+  width: 2.5rem;
+  height: 1px;
+  flex: 0 0 auto;
+  background: var(--color-bronze);
+}
+
+.voiceCard {
+  position: relative;
+  display: flex;
+  min-height: 28rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--color-line);
+  background: var(--color-stone);
+}
+
+.voiceCard::before {
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid #d7d1c7;
+  content: "";
+  pointer-events: none;
+}
+
+.voiceCardTop,
+.voiceCardBottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.voiceCardKicker {
+  max-width: 9rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.liveMark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+
+.liveMark span {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: var(--color-bronze);
+}
+
+.voiceVisual {
+  position: relative;
+  z-index: 1;
+  padding-inline: 0.5rem;
+}
+
+.waveFrame {
+  display: grid;
+  min-height: 9rem;
+  align-items: center;
+}
+
+.visualCaption {
+  margin: 1.1rem 0 0;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-style: italic;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.voiceCardBottom {
+  border-top: 1px solid #d7d1c7;
+  padding-top: 1rem;
+}
+
+.cameraOff {
+  color: var(--color-ink);
+}
+
+.whySection,
+.howSection,
+.pricingSection,
+.bridgeSection,
+.faqSection {
+  padding-block: var(--space-8);
+}
+
+.sectionIntroBlock {
+  max-width: 51rem;
+}
+
+.sectionIntroBlock .sectionHeading {
+  margin-top: 1.15rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: clamp(3rem, 6vw, 5.5rem);
+  border-top: 1px solid var(--color-line);
+}
+
+.featureCard {
+  min-height: 16rem;
+  padding: 1.4rem clamp(1rem, 2.5vw, 2.25rem) 0 0;
+}
+
+.featureCard + .featureCard {
+  padding-left: clamp(1rem, 2.5vw, 2.25rem);
+  border-left: 1px solid var(--color-line);
+}
+
+.cardIndex {
+  color: var(--color-ink);
+  font-family: var(--font-editorial);
+  font-size: 1.35rem;
+}
+
+.featureCard h3,
+.step h3 {
+  margin: 1.8rem 0 0.65rem;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.65rem, 2.6vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.featureCard p,
+.step p {
+  max-width: 23rem;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  line-height: 1.85;
+}
+
+.howSection {
+  background: var(--color-stone);
+}
+
+.stepsList {
+  margin: clamp(3rem, 6vw, 5rem) 0 0;
+  padding: 0;
+  border-top: 1px solid #d7d1c7;
+  list-style: none;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 0.28fr) 1fr;
+  gap: 1.5rem;
+  padding-block: 1.65rem;
+  border-bottom: 1px solid #d7d1c7;
+}
+
+.stepNumber {
+  color: var(--color-ink);
+  font-family: var(--font-editorial);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+}
+
+.step h3 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+}
+
+.pricingSection {
+  background: var(--color-paper);
+}
+
+.pricingIntro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.pricingIntro .sectionHeading {
+  max-width: 42rem;
+  margin-top: 1.15rem;
+}
+
+.pricingSideNote {
+  max-width: 20rem;
+  margin: 0 0 0.3rem;
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  line-height: 1.8;
+}
+
+.focusGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+.focusCard {
+  padding: 1.15rem 1rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  transition:
+    border-color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.focusCard:hover {
+  border-color: var(--color-bronze);
+  transform: translateY(-3px);
+}
+
+.focusRate {
+  margin: 0;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.65rem, 2.4vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.focusRate span {
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.focusCard h3 {
+  margin: 0.85rem 0 0.4rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.focusCard > p:last-child {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  line-height: 1.7;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0.9rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.priceCard {
+  display: flex;
+  min-width: 0;
+  min-height: 31rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.35rem 1.2rem 1.25rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  transition:
+    border-color var(--motion-fast) ease,
+    transform var(--motion-fast) ease,
+    background-color var(--motion-fast) ease;
+}
+
+.priceCard:hover {
+  border-color: var(--color-bronze);
+  transform: translateY(-4px);
+}
+
+.featuredCard {
+  background: var(--color-stone);
+}
+
+.focusLabel,
+.recommended {
+  min-height: 1.4rem;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.recommended {
+  color: var(--color-ink);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  margin: 1.35rem 0 0.9rem;
+  font-family: var(--font-editorial);
+  font-size: clamp(3.5rem, 5vw, 4.4rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+.currency {
+  align-self: flex-start;
+  margin: 0.24rem 0.08rem 0 0;
+  font-size: 1.65rem;
+  letter-spacing: 0;
+}
+
+.perHour {
+  margin-left: 0.3rem;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.priceCard h3 {
+  min-height: 3.4rem;
+  margin: 0.6rem 0 0;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.45rem, 1.8vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.tierDescription {
+  margin: 0.9rem 0 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  line-height: 1.75;
+}
+
+.bestFor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 1rem 0 1.2rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.bestFor span {
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.tierActions {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.reserveButton {
+  width: 100%;
+  padding-inline: 0.5rem;
+  font-size: var(--text-xs);
+}
+
+.askLink {
+  color: var(--color-muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  text-decoration-color: var(--color-line);
+}
+
+.askLink:hover {
+  color: var(--color-ink);
+}
+
+.priceFootnote {
+  margin: 1.2rem 0 0;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.bridgeSection {
+  padding-top: 0;
+}
+
+.bridgeCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.65fr);
+  align-items: center;
+  gap: clamp(2.5rem, 8vw, 8rem);
+  padding: clamp(2rem, 6vw, 5rem);
+  border: 1px solid var(--color-line);
+  background: var(--color-stone);
+}
+
+.bridgeCopy .sectionHeading {
+  margin-top: 1.15rem;
+}
+
+.bridgeCopy > p:not(.eyebrow) {
+  max-width: 37rem;
+  margin: 1.25rem 0 1.6rem;
+  color: var(--color-muted);
+  font-size: var(--text-base);
+  line-height: 1.8;
+}
+
+.messageNote {
+  display: flex;
+  min-height: 16rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid #d7d1c7;
+  text-align: center;
+}
+
+.messageLabel,
+.messageHandle {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.messageHi {
+  margin-block: 0.3rem;
+  font-family: var(--font-editorial);
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+@media (max-width: 1040px) {
+  .focusGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricingGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .priceCard {
+    min-height: 28rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .heroLayout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .voiceCard {
+    min-height: 22rem;
+  }
+
+  .waveFrame {
+    min-height: 7rem;
+  }
+
+  .pricingIntro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .pricingSideNote {
+    max-width: 36rem;
+  }
+
+  .bridgeCard {
+    grid-template-columns: 1fr;
+  }
+
+  .messageNote {
+    min-height: 12rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .heroLayout {
+    --opening-distance: 9px;
+  }
+
+  .heroCopy > .eyebrow,
+  .heroCopy h1,
+  .heroLead,
+  .heroActions,
+  .heroNote,
+  .voiceCard {
+    animation-duration: 560ms;
+  }
+
+  .heroCopy h1 {
+    animation-delay: 40ms;
+  }
+
+  .heroLead {
+    animation-delay: 90ms;
+  }
+
+  .heroActions {
+    animation-delay: 140ms;
+  }
+
+  .heroNote {
+    animation-delay: 190ms;
+  }
+
+  .voiceCard {
+    animation-delay: 110ms;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(3.25rem, 15vw, 5rem);
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCard,
+  .featureCard + .featureCard {
+    min-height: auto;
+    padding: 1.3rem 0 1.5rem;
+    border-left: 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .featureCard h3 {
+    margin-top: 1rem;
+  }
+
+  .step {
+    grid-template-columns: 3.25rem 1fr;
+    gap: 1rem;
+  }
+
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .focusGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .priceCard {
+    min-height: 0;
+  }
+
+  .priceCard h3 {
+    min-height: 0;
+  }
+
+  .tierActions {
+    margin-top: 0.4rem;
+  }
+
+  .bridgeCard {
+    padding: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroCopy > .eyebrow,
+  .heroCopy h1,
+  .heroLead,
+  .heroActions,
+  .heroNote,
+  .voiceCard {
+    animation: none;
+  }
+
+  .priceCard,
+  .focusCard {
+    transition: none;
+  }
+}

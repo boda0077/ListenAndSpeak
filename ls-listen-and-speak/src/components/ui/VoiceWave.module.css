@@ -1,0 +1,35 @@
+.wave {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.18rem, 0.55vw, 0.42rem);
+}
+
+.bar {
+  width: 2px;
+  height: var(--wave-height);
+  border-radius: 2px;
+  background: var(--color-bronze);
+  animation: breathe 3.8s ease-in-out var(--wave-delay) infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scaleY(0.32);
+  }
+  50% {
+    transform: scaleY(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar {
+    animation: none;
+    transform: scaleY(0.58);
+    will-change: auto;
+  }
+}

@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light;
+
+  --color-paper: #f9f8f6;
+  --color-stone: #efece6;
+  --color-ink: #18181b;
+  --color-muted: #52525b;
+  --color-bronze: #8c7355;
+  --color-line: #dfdcd6;
+  --color-white: #ffffff;
+
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", Arial, sans-serif;
+
+  --text-xs: clamp(0.72rem, 0.69rem + 0.12vw, 0.78rem);
+  --text-sm: clamp(0.84rem, 0.8rem + 0.16vw, 0.94rem);
+  --text-base: clamp(0.96rem, 0.91rem + 0.2vw, 1.06rem);
+  --text-lg: clamp(1.1rem, 1.02rem + 0.38vw, 1.3rem);
+  --text-xl: clamp(1.3rem, 1.15rem + 0.72vw, 1.7rem);
+  --text-display: clamp(3.1rem, 7vw, 6.6rem);
+
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: clamp(5rem, 10vw, 9rem);
+
+  --content-width: 74rem;
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --radius-sm: 0.25rem;
+  --radius-card: 0.5rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-fast: 180ms;
+  --motion-slow: 700ms;
+}

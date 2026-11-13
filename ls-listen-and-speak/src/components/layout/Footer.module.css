@@ -1,0 +1,124 @@
+.footer {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+  color: var(--color-paper);
+  background: var(--color-ink);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr 1fr;
+  gap: clamp(2rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.brandColumn p,
+.promise {
+  max-width: 20rem;
+  color: #d1d0ce;
+  font-size: var(--text-sm);
+  line-height: 1.8;
+}
+
+.brandColumn p {
+  margin: 1.4rem 0 0;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-paper);
+  text-decoration: none;
+}
+
+.monogram {
+  font-family: var(--font-editorial);
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.88;
+}
+
+.wordmark {
+  margin-top: 0.45rem;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  line-height: 1;
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.linkColumn h2 {
+  margin: 0 0 0.55rem;
+  color: #c5b49e;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.linkColumn a {
+  color: var(--color-paper);
+  font-size: var(--text-sm);
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--motion-fast) ease;
+}
+
+.linkColumn a:hover {
+  text-decoration-color: var(--color-paper);
+}
+
+.promise {
+  margin: 0.65rem 0 0;
+}
+
+.disclaimer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid #454549;
+  color: #d1d0ce;
+  font-size: var(--text-xs);
+  line-height: 1.7;
+}
+
+.disclaimer p {
+  max-width: 52rem;
+  margin: 0;
+}
+
+.copyright {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 740px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brandColumn {
+    grid-column: 1 / -1;
+  }
+
+  .disclaimer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .brandColumn {
+    grid-column: auto;
+  }
+}
